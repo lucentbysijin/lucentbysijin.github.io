@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ലൂസന്റ് PSC | Lucent PSC - Kerala PSC Coaching Institute</title>
+    <meta name="description" content="Lucent PSC — Kerala PSC coaching, courses, video lessons, practice quiz and study resources. Learn. Practise. Succeed.">
+    <meta name="theme-color" content="#0e7490">
+    <meta property="og:title" content="ലൂസന്റ് PSC | Lucent PSC">
+    <meta property="og:description" content="Kerala PSC courses, video lessons and practice resources from Lucent PSC.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Manjari & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        primaryDark: '#155e75', // Cyan 800
+                        secondary: '#f59e0b', // Amber 500
+                        accent: '#10b981', // Emerald 500
+                    },
+                    fontFamily: {
+                        sans: ['Manjari', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Manjari', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden bg-white border-2 border-secondary shadow-lg flex items-center justify-center">
+                        <img src="assets/lucent-psc-logo.png" alt="Lucent PSC logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-primary tracking-wide block leading-none">ലൂസന്റ് <span class="text-secondary">PSC</span></span>
+                        <span class="text-xs text-slate-500 font-semibold tracking-wider">LUCENT PSC ACADEMY</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-slate-700">
+                    <a href="#home" class="hover:text-primary transition-colors py-2">ഹോം</a>
+                    <a href="#about" class="hover:text-primary transition-colors py-2">ഞങ്ങളെക്കുറിച്ച്</a>
+                    <a href="#courses" class="hover:text-primary transition-colors py-2">കോഴ്‌സുകൾ</a>
+                    <a href="#videos" class="hover:text-primary transition-colors py-2">വീഡിയോ ക്ലാസുകൾ</a>
+                    <a href="#learning" class="hover:text-primary transition-colors py-2">പഠനസഹായികൾ</a>
+                    <a href="#quiz" class="hover:text-primary transition-colors py-2">ഡെയ്‌ലി ക്വിസ്</a>
+                    <a href="#testimonials" class="hover:text-primary transition-colors py-2">വിജയഗാഥകൾ</a>
+                    <a href="#contact" class="hover:text-primary transition-colors py-2">ബന്ധപ്പെടുക</a>
+                </nav>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-secondary hover:bg-amber-600 text-slate-900 font-bold px-5 py-2.5 rounded-full shadow-md transition transform hover:-translate-y-0.5 inline-flex items-center space-x-2">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>അഡ്മിഷൻ നേടൂ</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-primary focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">ഹോം</a>
+            <a href="#about" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">ഞങ്ങളെക്കുറിച്ച്</a>
+            <a href="#courses" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">കോഴ്‌സുകൾ</a>
+            <a href="#videos" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">വീഡിയോ ക്ലാസുകൾ</a>
+            <a href="#learning" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">പഠനസഹായികൾ</a>
+            <a href="#quiz" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">ഡെയ്‌ലി ക്വിസ്</a>
+            <a href="#testimonials" class="block text-slate-700 hover:text-primary font-medium py-2 border-b border-slate-100">വിജയഗാഥകൾ</a>
+            <a href="#contact" class="block text-slate-700 hover:text-primary font-medium py-2">ബന്ധപ്പെടുക</a>
+            <a href="#contact" class="block w-full text-center bg-secondary text-slate-900 font-bold py-3 rounded-lg shadow mt-2">
+                അഡ്മിഷൻ നേടൂ
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Banner Section -->
+        <section id="home" class="relative bg-gradient-to-r from-primaryDark via-primary to-cyan-800 text-white py-16 md:py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center md:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-yellow-300 text-sm font-semibold">
+                            <i class="fa-solid fa-award"></i>
+                            <span>കേരളത്തിലെ നമ്പർ 1 PSC കോച്ചിംഗ് സെന്റർ</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                            നിങ്ങളുടെ സർക്കാർ ജോലി എന്ന സ്വപ്നം <span class="text-secondary">ലൂസന്റ് PSC</span> യോടൊപ്പം സത്യമാക്കൂ!
+                        </h1>
+                        <p class="text-slate-100 text-lg sm:text-xl font-normal leading-relaxed">
+                            കൃത്യമായ മാർഗ്ഗനിർദ്ദേശം, മികച്ച സ്റ്റഡി മെറ്റീരിയലുകൾ, ദിവസേനയുള്ള മാതൃകാ പരീക്ഷകൾ എന്നിവയിലൂടെ നിങ്ങളെ വിജയത്തിലേക്ക് ഞങ്ങൾ നയിക്കുന്നു.
+                        </p>
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center md:justify-start pt-4">
+                            <a href="#contact" class="bg-secondary hover:bg-amber-500 text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 text-center text-lg">
+                                എന്റോൾ ചെയ്യൂ <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#courses" class="bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/30 px-8 py-4 rounded-xl transition text-center text-lg">
+                                ബാച്ചുകൾ അറിയാം
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hero Image / Stats Card -->
+                    <div class="relative">
+                        <div class="bg-white/10 backdrop-blur-lg p-6 sm:p-8 rounded-3xl border border-white/20 shadow-2xl relative z-10">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students Studying" class="rounded-2xl shadow-md w-full h-64 sm:h-80 object-cover mb-6">
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div class="bg-white/20 p-3 rounded-xl">
+                                    <div class="text-2xl font-bold text-secondary">5000+</div>
+                                    <div class="text-xs text-slate-200">വിജയികൾ</div>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded-xl">
+                                    <div class="text-2xl font-bold text-secondary">15+</div>
+                                    <div class="text-xs text-slate-200">വിദഗ്ദ്ധ അധ്യാപകർ</div>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded-xl">
+                                    <div class="text-2xl font-bold text-secondary">100%</div>
+                                    <div class="text-xs text-slate-200">സപ്പോർട്ട്</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 text-white py-7 border-b-4 border-secondary" aria-label="Lucent PSC inspiration">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-5 md:gap-7">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/10 p-2 flex-shrink-0">
+                    <img src="assets/lucent-psc-logo.png" alt="Lucent PSC emblem" class="w-full h-full object-contain">
+                </div>
+                <div class="text-center md:text-left flex-1">
+                    <p class="text-secondary text-xs font-bold tracking-widest uppercase">LUCENT PSC • MOTIVATION</p>
+                    <blockquote lang="ml" class="text-xl sm:text-2xl font-bold mt-2">ദൃഢനിശ്ചയം ചെയ്തവർക്ക് എന്തിനെയും മറികടക്കാൻ കഴിയും</blockquote>
+                </div>
+                <a href="https://www.threads.com/@lucent_psc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/30 hover:bg-white/10 px-4 py-3 rounded-xl font-semibold transition" aria-label="Follow Lucent PSC on Threads">
+                    <span class="w-7 h-7 rounded-full border border-white flex items-center justify-center font-bold">@</span><span>Threads</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </section>
+        <section class="bg-white py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <figure class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                    <img src="assets/study-hero.png" alt="Lucent PSC learning and preparation banner" class="block w-full h-auto">
+                    <figcaption class="bg-slate-50 text-slate-600 text-center text-sm py-2 px-4">LUCENT PSC — Learn. Practise. Succeed.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-primary font-bold tracking-wide uppercase text-sm">ലൂസന്റ് PSC യെക്കുറിച്ച്</h2>
+                    <p class="text-3xl font-bold text-slate-900 mt-2">വിജയത്തിലേക്കുള്ള കൃത്യമായ വഴികാട്ടി</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            കേരള പബ്ലിക് സർവീസ് കമ്മീഷൻ (KPSC) നടത്തുന്ന വിവിധ പരീക്ഷകളിൽ ഉദ്യോഗാർത്ഥികളെ മികച്ച റാങ്കുകളോടെ വിജയത്തിലെത്തിക്കാൻ പ്രതിജ്ഞാബദ്ധമായ സ്ഥാപനമാണ് **ലൂസന്റ് PSC (Lucent PSC)**.
+                        </p>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            മാറിക്കൊണ്ടിരിക്കുന്ന പരീക്ഷാ രീതികൾക്ക് അനുസൃതമായി തയ്യാറാക്കിയ സിലബസ്, പരിചയസമ്പന്നരായ അധ്യാപകരുടെ ക്ലാസുകൾ, സംശയനിവാരണത്തിന് പ്രത്യേക സമയം എന്നിവ ഞങ്ങളുടെ പ്രത്യേകതയാണ്. അടിസ്ഥാന വിവരങ്ങൾ മുതൽ അഡ്വാൻസ്ഡ് ലെവൽ ചോദ്യങ്ങൾ വരെ ഞങ്ങൾ ലളിതമായി പഠിപ്പിക്കുന്നു.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-accent text-xl"></i>
+                                <span class="text-slate-800 font-semibold">കൃത്യമായ സ്റ്റഡി പ്ലാനും സിലബസ് കവറേജും</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-accent text-xl"></i>
+                                <span class="text-slate-800 font-semibold">ഓരോ വിദ്യാർത്ഥിക്കും പ്രത്യേക ശ്രദ്ധയും മെന്ററിംഗും</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-accent text-xl"></i>
+                                <span class="text-slate-800 font-semibold">പ്രതിവാര മോക്ക് ടെസ്റ്റുകളും റിവിഷൻ ക്ലാസുകളും</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-cyan-50 p-6 rounded-2xl border border-cyan-100 text-center">
+                            <i class="fa-solid fa-book-open text-primary text-4xl mb-3"></i>
+                            <h3 class="font-bold text-lg mb-1 text-slate-800">അപ്‌ഡേറ്റഡ് സിലബസ്</h3>
+                            <p class="text-sm text-slate-600">പുതിയ SCERT, NCERT പാഠപുസ്തകങ്ങൾ അടിസ്ഥാനമാക്കിയുള്ള ക്ലാസുകൾ.</p>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-center">
+                            <i class="fa-solid fa-users text-amber-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-lg mb-1 text-slate-800">മികച്ച അധ്യാപകർ</h3>
+                            <p class="text-sm text-slate-600">വർഷങ്ങളുടെ പരിചയസമ്പത്തുള്ള അധ്യാപകരുടെ നേതൃത്വം.</p>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center">
+                            <i class="fa-solid fa-laptop-code text-accent text-4xl mb-3"></i>
+                            <h3 class="font-bold text-lg mb-1 text-slate-800">ഓൺലൈൻ & ഓഫ്‌ലൈൻ</h3>
+                            <p class="text-sm text-slate-600">നിങ്ങളുടെ സൗകര്യത്തിനനുസരിച്ച് ക്ലാസുകൾ തിരഞ്ഞെടുക്കാം.</p>
+                        </div>
+                        <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100 text-center">
+                            <i class="fa-solid fa-bullseye text-purple-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-lg mb-1 text-slate-800">റാങ്ക് മേക്കിംഗ്</h3>
+                            <p class="text-sm text-slate-600">പ്രത്യേക റാങ്ക് ഫയലുകളും ഷോർട്ട് കട്ട് ടെക്നിക്കുകളും.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-primary font-bold tracking-wide uppercase text-sm">YOUR LEARNING TOOLKIT</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-2">പഠനം കൂടുതൽ ക്രമബദ്ധമാക്കാം</h2>
+                    <p class="text-slate-600 mt-3">വീഡിയോ ക്ലാസുകൾ, കറന്റ് അഫയേഴ്‌സ്, പരിശീലന ചോദ്യങ്ങൾ എന്നിവ ഒരിടത്ത്.</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                        <div class="w-14 h-14 bg-cyan-50 text-primary rounded-xl flex items-center justify-center text-2xl"><i class="fa-brands fa-youtube"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mt-5 mb-2">വീഡിയോ ക്ലാസുകൾ</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">പ്രധാന PSC വിഷയങ്ങൾ ലളിതമായി പഠിക്കാൻ LUCENT PSC YouTube ക്ലാസുകൾ ഉപയോഗിക്കൂ.</p>
+                        <a href="https://www.youtube.com/@lucentpsc/videos" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 text-primary font-bold text-sm">വീഡിയോകൾ കാണാം <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+                    <article class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                        <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-newspaper"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mt-5 mb-2">കറന്റ് അഫയേഴ്‌സ്</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">പൊതുവിജ്ഞാനവും സമകാലിക സംഭവങ്ങളും ആവർത്തിച്ച് പഠിക്കുകയും പ്രധാന പോയിന്റുകൾ റിവൈസ് ചെയ്യുകയും ചെയ്യൂ.</p>
+                        <a href="https://www.youtube.com/@lucentpsc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 text-primary font-bold text-sm">ചാനൽ സന്ദർശിക്കൂ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+                    <article class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mt-5 mb-2">പരിശീലന ചോദ്യങ്ങൾ</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">താഴെയുള്ള മാതൃകാ ക്വിസ് ഉപയോഗിച്ച് അറിവ് പരിശോധിക്കുകയും തെറ്റുകൾ തിരുത്തുകയും ചെയ്യൂ.</p>
+                        <a href="#quiz" class="inline-flex items-center gap-2 mt-4 text-primary font-bold text-sm">ക്വിസ് ആരംഭിക്കൂ <i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+                <!-- Courses Offered Section -->
+        <section id="courses" class="py-16 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-primary font-bold tracking-wide uppercase text-sm">ഞങ്ങളുടെ ബാച്ചുകൾ</h2>
+                    <p class="text-3xl font-bold text-slate-900 mt-2">പ്രധാന കോഴ്‌സുകൾ</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Course Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-primary p-4 text-white text-center">
+                                <span class="text-xs bg-secondary text-slate-900 font-bold px-2 py-1 rounded-full uppercase">10th Level</span>
+                                <h3 class="text-xl font-bold mt-2">LDC / LGS</h3>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-slate-600 text-sm mb-4">
+                                    ലോവർ ഡിവിഷൻ ക്ലർക്ക് (LDC), ലാസ്റ്റ് ഗ്രേഡ് സെർവന്റ്സ് (LGS) പരീക്ഷകൾക്കായുള്ള സമഗ്ര പരിശീലനം.
+                                </p>
+                                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> ദിവസേന ഡെയ്‌ലി എക്‌സാം</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> ഗണിതം & റീസണിംഗ് പ്രത്യേക ക്ലാസ്</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> കറന്റ് അഫയേഴ്‌സ് നോട്ട്സ്</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-slate-100 mt-auto">
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
+                                <span><i class="fa-regular fa-clock"></i> 6 മാസം</span>
+                                <span><i class="fa-solid fa-users"></i> റെഗുലർ/വീക്കെൻഡ്</span>
+                            </div>
+                            <a href="#contact" class="block text-center bg-slate-100 hover:bg-primary hover:text-white text-primary font-bold py-2.5 rounded-lg transition">വിശദാംശങ്ങൾ അറിയാൻ</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-primary p-4 text-white text-center">
+                                <span class="text-xs bg-secondary text-slate-900 font-bold px-2 py-1 rounded-full uppercase">Uniform Post</span>
+                                <h3 class="text-xl font-bold mt-2">CPO / Fireman</h3>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-slate-600 text-sm mb-4">
+                                    സിവിൽ പോലീസ് ഓഫീസർ, ഫയർമാൻ, വനിതാ പോലീസ് പരീക്ഷകൾക്ക് വേണ്ടിയുള്ള തീവ്ര പരിശീലനം.
+                                </p>
+                                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> സ്പെഷ്യൽ ടോപ്പിക് നോട്ട്സ്</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> മോഡൽ പരീക്ഷകൾ</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> ഫിസിക്കൽ ട്രെയിനിംഗ് ഗൈഡൻസ്</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-slate-100 mt-auto">
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
+                                <span><i class="fa-regular fa-clock"></i> 5 മാസം</span>
+                                <span><i class="fa-solid fa-users"></i> ഇൻറെൻസീവ് ബാച്ച്</span>
+                            </div>
+                            <a href="#contact" class="block text-center bg-slate-100 hover:bg-primary hover:text-white text-primary font-bold py-2.5 rounded-lg transition">വിശദാംശങ്ങൾ അറിയാൻ</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-between border-2 border-primary">
+                        <div>
+                            <div class="bg-primary p-4 text-white text-center relative">
+                                <span class="absolute top-2 right-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">POPULAR</span>
+                                <span class="text-xs bg-secondary text-slate-900 font-bold px-2 py-1 rounded-full uppercase">Graduate Level</span>
+                                <h3 class="text-xl font-bold mt-2">Degree Level Prelims & Mains</h3>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-slate-600 text-sm mb-4">
+                                    Secretariat Assistant, University Assistant, SI തുടങ്ങിയ പരീക്ഷകൾക്കായുള്ള ഹൈ-ലെവൽ പരിശീലനം.
+                                </p>
+                                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> വിശദമായ ഡിസ്‌ക്രിപ്റ്റീവ് ക്ലാസുകൾ</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> ഇംഗ്ലീഷ് & മലയാളം സ്പെഷ്യൽ ബാച്ച്</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> പ്രീവിയസ് ഇയർ ക്വസ്റ്റ്യൻ അനാലിസിസ്</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-slate-100 mt-auto">
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
+                                <span><i class="fa-regular fa-clock"></i> 8 മാസം</span>
+                                <span><i class="fa-solid fa-users"></i> ഓൺലൈൻ / ഓഫ്‌ലൈൻ</span>
+                            </div>
+                            <a href="#contact" class="block text-center bg-primary text-white font-bold py-2.5 rounded-lg transition hover:bg-primaryDark">വിശദാംശങ്ങൾ അറിയാൻ</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-primary p-4 text-white text-center">
+                                <span class="text-xs bg-secondary text-slate-900 font-bold px-2 py-1 rounded-full uppercase">Plus Two Level</span>
+                                <h3 class="text-xl font-bold mt-2">12th Level Prelims & Mains</h3>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-slate-600 text-sm mb-4">
+                                    Civil Excise Officer, Beat Forest Officer, Panchayat Secretary തുടങ്ങിയ തസ്തികകൾക്കായുള്ള കോച്ചിംഗ്.
+                                </p>
+                                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> SCERT/NCERT ടെക്സ്റ്റ്ബുക്ക് റിവിഷൻ</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> വിദ്യാലയ പാഠപുസ്തക ചോദ്യങ്ങൾ</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-accent mr-2"></i> മോക്ക് പരീക്ഷകൾ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-slate-100 mt-auto">
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
+                                <span><i class="fa-regular fa-clock"></i> 6 മാസം</span>
+                                <span><i class="fa-solid fa-users"></i> റെഗുലർ ബാച്ച്</span>
+                            </div>
+                            <a href="#contact" class="block text-center bg-slate-100 hover:bg-primary hover:text-white text-primary font-bold py-2.5 rounded-lg transition">വിശദാംശങ്ങൾ അറിയാൻ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-primary font-bold tracking-wide uppercase text-sm">എന്തുകൊണ്ട് ലൂസന്റ് PSC?</h2>
+                    <p class="text-3xl font-bold text-slate-900 mt-2">ഞങ്ങളുടെ പ്രത്യേകതകൾ</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-cyan-100 text-primary rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">ഡെയ്‌ലി മാതൃകാ പരീക്ഷകൾ</h3>
+                            <p class="text-sm text-slate-600">ദിവസേന പഠിക്കുന്ന ഭാഗങ്ങളിൽ നിന്ന് അന്നുതന്നെ ഒഎംആർ/ഓൺലൈൻ പരീക്ഷകൾ.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">വ്യക്തിഗത മെന്ററിംഗ്</h3>
+                            <p class="text-sm text-slate-600">ഓരോ വിദ്യാർത്ഥിയുടെയും പഠന നിലവാരം വിലയിരുത്തി ആവശ്യമായ പിന്തുണ നൽകുന്നു.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-emerald-100 text-accent rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">സ്റ്റഡി മെറ്റീരിയലുകൾ</h3>
+                            <p class="text-sm text-slate-600">ലളിതമായി മനസ്സിലാക്കാവുന്ന രീതിയിൽ തയ്യാറാക്കിയ നോട്ട്സുകളും ക്യാപ്സ്യൂളുകളും.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">പ്രീവിയസ് ഇയർ സൊല്യൂഷൻസ്</h3>
+                            <p class="text-sm text-slate-600">പഴയകാല ചോദ്യപേപ്പറുകൾ അപഗ്രഥിച്ചുള്ള പ്രത്യേക പരിശീലനം.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">മാത്സ് & ഇംഗ്ലീഷ് സ്പെഷ്യൽ</h3>
+                            <p class="text-sm text-slate-600">ബുദ്ധിമുട്ടുള്ള വിഷയങ്ങൾ എളുപ്പത്തിൽ പഠിക്കാൻ ഷോർട്ട്കട്ട് വഴികൾ.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 p-4 rounded-xl hover:bg-slate-50 transition">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">ഡൗട്ട് ക്ലിയറൻസ് സെഷൻ</h3>
+                            <p class="text-sm text-slate-600">സന്ദേഹങ്ങൾ ദുരീകരിക്കാൻ പ്രത്യേക അധ്യാപകരുടെ സഹായം എപ്പോഴും ലഭ്യമാണ്.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Interactive Quiz Section -->
+        <section id="videos" class="py-16 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-primary font-bold tracking-wide uppercase text-sm">WATCH & LEARN</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-2">വീഡിയോ ക്ലാസുകളും റിവിഷൻ സെഷനുകളും</h2>
+                    <p class="text-slate-600 mt-3">വീഡിയോ ചിത്രങ്ങളിൽ ക്ലിക്ക് ചെയ്ത് ഈ പേജിൽ തന്നെ ക്ലാസുകൾ കാണാം.</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                        <div class="relative aspect-video bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/wifuZfHg1Qk/hqdefault.jpg" alt="Company Board LGS syllabus and study plan video thumbnail" class="w-full h-full object-cover">
+                            <button type="button" class="yt-play absolute inset-0 m-auto w-14 h-11 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center text-xl" data-video-id="wifuZfHg1Qk" data-title="Company Board LGS: syllabus and study plan" aria-label="Play Company Board LGS syllabus and study plan"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="p-5"><h3 class="font-bold text-slate-900 leading-snug">Company Board LGS: സിലബസും പഠനപദ്ധതിയും</h3><p class="text-sm text-slate-500 mt-2">Study plan · 13 min</p></div>
+                    </article>
+                    <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                        <div class="relative aspect-video bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/sF6T8r6iMwo/hqdefault.jpg" alt="Five Year Plans for Kerala PSC video thumbnail" class="w-full h-full object-cover">
+                            <button type="button" class="yt-play absolute inset-0 m-auto w-14 h-11 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center text-xl" data-video-id="sF6T8r6iMwo" data-title="Five Year Plans for Kerala PSC" aria-label="Play Five Year Plans for Kerala PSC"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="p-5"><h3 class="font-bold text-slate-900 leading-snug">അഞ്ചുവത്സര പദ്ധതികൾ – Kerala PSC</h3><p class="text-sm text-slate-500 mt-2">General knowledge · 25 min</p></div>
+                    </article>
+                    <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                        <div class="relative aspect-video bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/Rj978grAPu8/hqdefault.jpg" alt="Primary secondary and complementary colours video thumbnail" class="w-full h-full object-cover">
+                            <button type="button" class="yt-play absolute inset-0 m-auto w-14 h-11 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center text-xl" data-video-id="Rj978grAPu8" data-title="Primary, secondary and complementary colours" aria-label="Play primary, secondary and complementary colours"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="p-5"><h3 class="font-bold text-slate-900 leading-snug">പ്രാഥമിക, ദ്വിതീയ, പൂരക നിറങ്ങൾ</h3><p class="text-sm text-slate-500 mt-2">Science · 10 min</p></div>
+                    </article>
+                    <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                        <div class="relative aspect-video bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/65GcbBv3r10/hqdefault.jpg" alt="Company Board LGS important SCERT topics live replay thumbnail" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold tracking-wide px-2 py-1 rounded">LIVE REPLAY</span>
+                            <button type="button" class="yt-play absolute inset-0 m-auto w-14 h-11 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center text-xl" data-video-id="65GcbBv3r10" data-title="Company Board LGS important SCERT topics live replay" aria-label="Play Company Board LGS live replay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="p-5"><h3 class="font-bold text-slate-900 leading-snug">Company Board LGS: പ്രധാന SCERT വിഷയങ്ങൾ</h3><p class="text-sm text-slate-500 mt-2">Live-session replay · 39 min</p></div>
+                    </article>
+                </div>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 text-center">
+                    <a href="https://www.youtube.com/@lucentpsc/videos" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primaryDark text-white font-bold px-6 py-3 rounded-xl transition"><i class="fa-brands fa-youtube"></i> എല്ലാ വീഡിയോകളും</a>
+                    <a href="https://www.youtube.com/@lucentpsc/streams" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 bg-white border border-slate-300 hover:border-primary text-slate-700 font-bold px-6 py-3 rounded-xl transition"><i class="fa-solid fa-tower-broadcast"></i> ലൈവ് & റീപ്ലേകൾ</a>
+                </div>
+            </div>
+        </section>
+
+                <section id="quiz" class="py-16 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="bg-secondary text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase">സൗജന്യ പരിശീലനം</span>
+                    <h2 class="text-3xl font-bold mt-3">ഇന്നത്തെ PSC മാതൃകാ ക്വിസ്</h2>
+                    <p class="text-slate-400 text-sm mt-2">നിങ്ങളുടെ അറിവ് സ്വയം പരിശോധിക്കൂ!</p>
+                </div>
+
+                <!-- Quiz Card -->
+                <div id="quiz-container" class="bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-700 shadow-xl">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+                        <span id="quiz-progress" class="text-secondary font-semibold text-sm">ചോദ്യം 1 / 3</span>
+                        <span class="text-xs bg-slate-700 text-slate-300 px-3 py-1 rounded-md"><i class="fa-regular fa-clock mr-1"></i> കേരള ചരിത്രം</span>
+                    </div>
+
+                    <div id="quiz-content">
+                        <!-- Question and options rendered dynamically -->
+                    </div>
+
+                    <div id="quiz-result" class="hidden text-center py-6">
+                        <i class="fa-solid fa-trophy text-amber-400 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">അഭിനന്ദനങ്ങൾ!</h3>
+                        <p id="quiz-score-text" class="text-slate-300 text-lg mb-6"></p>
+                        <button onclick="restartQuiz()" class="bg-secondary hover:bg-amber-500 text-slate-900 font-bold px-6 py-2.5 rounded-xl transition">
+                            വീണ്ടും ശ്രമിക്കൂ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Success Stories -->
+        <section id="routine" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-primary font-bold tracking-wide uppercase text-sm">A SIMPLE STUDY HABIT</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-2">ഓരോ പഠനസമയവും ഫലപ്രദമാക്കാം</h2>
+                    <p class="text-slate-600 mt-3">തുടർച്ചയായ പഠനത്തിനായി ലളിതമായ നാല് ഘട്ടങ്ങൾ.</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-cyan-50 border border-cyan-100 rounded-2xl p-5"><span class="text-primary font-extrabold text-sm">01 · LEARN</span><h3 class="font-bold text-slate-900 mt-2">പഠിക്കൂ</h3><p class="text-sm text-slate-600 mt-1">ഒരു വിഷയം തിരഞ്ഞെടുത്ത് അടിസ്ഥാനകാര്യങ്ങൾ മനസ്സിലാക്കുക.</p></div>
+                    <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5"><span class="text-amber-700 font-extrabold text-sm">02 · PRACTISE</span><h3 class="font-bold text-slate-900 mt-2">പരിശീലിക്കൂ</h3><p class="text-sm text-slate-600 mt-1">ആ വിഷയവുമായി ബന്ധപ്പെട്ട ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക.</p></div>
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5"><span class="text-emerald-700 font-extrabold text-sm">03 · REVIEW</span><h3 class="font-bold text-slate-900 mt-2">വിലയിരുത്തൂ</h3><p class="text-sm text-slate-600 mt-1">തെറ്റുകൾ പരിശോധിച്ച് ബുദ്ധിമുട്ടുള്ള ഭാഗങ്ങൾ വീണ്ടും പഠിക്കുക.</p></div>
+                    <div class="bg-violet-50 border border-violet-100 rounded-2xl p-5"><span class="text-violet-700 font-extrabold text-sm">04 · REPEAT</span><h3 class="font-bold text-slate-900 mt-2">ആവർത്തിക്കൂ</h3><p class="text-sm text-slate-600 mt-1">ക്രമമായി ആവർത്തിച്ച് പഠനശീലം വളർത്തുക.</p></div>
+                </div>
+            </div>
+        </section>
+
+                <section id="testimonials" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-primary font-bold tracking-wide uppercase text-sm">വിജയഗാഥകൾ</h2>
+                    <p class="text-3xl font-bold text-slate-900 mt-2">ഞങ്ങളുടെ വിജയികൾ പറയുന്നത്</p>
+                    <div class="w-20 h-1.5 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                "ലൂസന്റ് PSC-യിലെ മാത്സ് ക്ലസ്സുകളും ഡെയ്‌ലി ടെസ്റ്റുകളുമാണ് എന്നെ LDC റാങ്ക് ലിസ്റ്റിൽ എത്തിച്ചത്. സർമാരുടെ പിന്തുണ എടുത്തു പറയേണ്ട ഒന്നാണ്!"
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3 border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-primary/20 text-primary font-bold rounded-full flex items-center justify-center">
+                                SR
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">സുജിത്ത് രാജ്</h4>
+                                <p class="text-xs text-slate-500">LDC 2024 Rank Winner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                "പഠിക്കേണ്ട കാര്യങ്ങൾ കൃത്യമായി ഷോർട്ട് ആക്കി തരുന്നതിനാൽ സമയം ഒരുപാട് ലാഭിക്കാം. ഡിഗ്രി ലെവൽ പരീക്ഷയ്ക്ക് എനിക്ക് വലിയ സഹായമായി."
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3 border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-amber-100 text-amber-700 font-bold rounded-full flex items-center justify-center">
+                                AP
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">അനുപ്രിയ K.</h4>
+                                <p class="text-xs text-slate-500">University Asst. Candidate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                "ഹൗസ്‌വൈഫ് ആയ എനിക്ക് ഓൺലൈൻ ബാച്ചും റെക്കോർഡഡ് ക്ലാസുകളും വളരെ ഉപയോഗപ്രദമായിരുന്നു. കൃത്യമായ മെന്ററിംഗ് സിസ്റ്റം ഉണ്ട്."
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3 border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-emerald-100 text-emerald-700 font-bold rounded-full flex items-center justify-center">
+                                RM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">രശ്മി എം.</h4>
+                                <p class="text-xs text-slate-500">LGS Selected Candidate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Enquiry Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-primary font-bold tracking-wide uppercase text-sm">ബന്ധപ്പെടുക</h2>
+                        <h3 class="text-3xl font-bold text-slate-900 mt-2 mb-6">കൂടുതൽ വിവരങ്ങൾക്കും അഡ്മിഷനും വിളിക്കൂ</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">
+                            നിങ്ങളുടെ സംശയങ്ങൾ തീർക്കാനും ബാച്ചുകളിൽ ചേരാനും ഞങ്ങളുടെ പ്രതിനിധിയുമായി നേരിട്ട് സംസാരിക്കാം. താഴെ നൽകിയിരിക്കുന്ന വിലാസത്തിലോ ഫോൺ നമ്പറിലോ ബന്ധപ്പെടാവുന്നതാണ്.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">സ്ഥാപന വിലാസം</h4>
+                                    <p class="text-slate-600 text-sm">സ്ഥാപനത്തിന്റെ ഔദ്യോഗിക വിലാസം ഇവിടെ ചേർക്കുക</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">ഫോൺ നമ്പർ</h4>
+                                    <p class="text-slate-600 text-sm">സ്ഥാപനത്തിന്റെ സ്ഥിരീകരിച്ച ഫോൺ നമ്പർ ചേർക്കുക</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-emerald-100 text-accent rounded-xl flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">ഇമെയിൽ വിലാസം</h4>
+                                    <p class="text-slate-600 text-sm">സ്ഥാപനത്തിന്റെ ഔദ്യോഗിക ഇമെയിൽ ചേർക്കുക</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="mt-8 pt-6 border-t border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-3">ഞങ്ങളെ ഫോളോ ചെയ്യൂ:</h4>
+                            <div class="flex space-x-3">
+                                
+                                <a href="https://www.youtube.com/@lucentpsc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 bg-slate-100 hover:bg-red-600 hover:text-white text-slate-600 rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+                                
+                                <a href="https://www.instagram.com/lucent_psc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 bg-slate-100 hover:bg-pink-600 hover:text-white text-slate-600 rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.threads.com/@lucent_psc" target="_blank" rel="noopener noreferrer" aria-label="Threads" class="w-10 h-10 bg-slate-100 hover:bg-slate-800 hover:text-white text-slate-600 rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-at"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enquiry Form -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-md">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">ഓൺലൈൻ അഡ്മിഷൻ / എൻക്വയറി</h3>
+                        <p class="text-sm text-slate-600 mb-6">വിവരങ്ങൾ നൽകൂ, ഞങ്ങൾ നിങ്ങളെ തിരിച്ചു വിളിക്കാം.</p>
+
+                        <form id="enquiry-form" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">നിങ്ങളുടെ പേര് *</label>
+                                <input type="text" required placeholder="പേര് നൽകുക" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">ഫോൺ നമ്പർ *</label>
+                                <input type="tel" required placeholder="10 അക്ക മൊബൈൽ നമ്പർ" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">തിരഞ്ഞെടുക്കുന്ന കോഴ്‌സ്</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                                    <option value="ldc">LDC / LGS (10th Level)</option>
+                                    <option value="cpo">CPO / Fireman (Police)</option>
+                                    <option value="degree">Degree Level Prelims & Mains</option>
+                                    <option value="plustwo">12th Level Prelims & Mains</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">സന്ദേശം / സംശയങ്ങൾ</label>
+                                <textarea rows="3" placeholder="നിങ്ങൾക്ക് ചോദിക്കാനുള്ള കാര്യങ്ങൾ ഇവിടെ എഴുതുക..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                                സബ്മിറ്റ് ചെയ്യൂ <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+
+                        <div id="form-alert" class="hidden mt-4 p-4 rounded-xl bg-amber-100 text-amber-900 text-sm font-semibold text-center" role="status">
+                            ഇത് ഡെമോ ഫോമിന്റെ സന്ദേശമാണ്. യഥാർത്ഥ എൻക്വയറി സ്വീകരിക്കാൻ ഫോം സർവീസ് ബന്ധിപ്പിക്കേണ്ടതാണ്.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-9 h-9 rounded-lg overflow-hidden bg-white border border-secondary flex items-center justify-center"><img src="assets/lucent-psc-logo.png" alt="Lucent PSC logo" class="w-full h-full object-contain"></div>
+                        <span class="text-xl font-bold text-white tracking-wide">ലൂസന്റ് <span class="text-secondary">PSC</span></span>
+                    </div>
+                    <p class="text-sm">കേരള PSC പരീക്ഷകളിൽ മികച്ച വിജയം സ്വന്തമാക്കാൻ ലൂസന്റ് PSC യോടൊപ്പം ചേർന്ന് പഠിക്കൂ.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">ലിങ്കുകൾ</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">ഹോം</a></li>
+                        <li><a href="#about" class="hover:text-white transition">ഞങ്ങളെക്കുറിച്ച്</a></li>
+                        <li><a href="#courses" class="hover:text-white transition">കോഴ്‌സുകൾ</a></li>
+                        <li><a href="#quiz" class="hover:text-white transition">ഡെയ്‌ലി ക്വിസ്</a></li>
+                        <li><a href="#videos" class="hover:text-white transition">വീഡിയോ ക്ലാസുകൾ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">ബാച്ചുകൾ</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#courses" class="hover:text-white transition">LDC / LGS Batch</a></li>
+                        <li><a href="#courses" class="hover:text-white transition">Degree Level Coaching</a></li>
+                        <li><a href="#courses" class="hover:text-white transition">CPO / Uniform Post</a></li>
+                        <li><a href="#courses" class="hover:text-white transition">Plus Two Level Special</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">ഓഫീസ് സമയം</h4>
+                    <p class="text-sm">തിങ്കൾ - ശനി: 9:00 AM - 6:00 PM</p>
+                    <p class="text-sm mt-2">ഞായർ: മോക്ക് ടെസ്റ്റ് & ഓൺലൈൻ ക്ലാസുകൾ മാത്രം</p>
+                    <div class="flex gap-4 mt-4 text-xl">
+                        <a href="https://www.youtube.com/@lucentpsc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-red-400"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/lucent_psc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.threads.com/@lucent_psc" target="_blank" rel="noopener noreferrer" aria-label="Threads" class="hover:text-white"><i class="fa-brands fa-at"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Lucent PSC Academy. All Rights Reserved. Designed for Kerala PSC Aspirants.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
+        });
+
+        // Close mobile menu on clicking links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Quiz Logic
+        const quizData = [
+            {
+                question: "1. തിരുവിതാംകൂറിൽ 'പ്രാഥമിക വിദ്യാഭ്യാസം' സൗജന്യമാക്കിയ ഭരണാധികാരി ആര്?",
+                options: ["സ്വാതി തിരുനാൾ", "ശ്രീ മൂലം തിരുനാൾ", "റാണി ഗൗരി പാർവ്വതി ഭായി", "ആയില്യം തിരുനാൾ"],
+                correct: 2
+            },
+            {
+                question: "2. കേരളത്തിലെ ഏറ്റവും വലിയ നദി ഏതാണ്?",
+                options: ["ഭാരതപ്പുഴ", "പെരിയാർ", "പമ്പ", "ചാലിയാർ"],
+                correct: 1
+            },
+            {
+                question: "3. 'ആത്മാവിദ്യാ സംഘം' സ്ഥാപിച്ചത് ആര്?",
+                options: ["ശ്രീ നാരായണ ഗുരു", "വാഗ്ഭടാനന്ദൻ", "അയ്യങ്കാളി", "ചട്ടമ്പി സ്വാമികൾ"],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const quizContent = document.getElementById('quiz-content');
+            const quizProgress = document.getElementById('quiz-progress');
+            const data = quizData[currentQuestion];
+
+            quizProgress.innerText = `ചോദ്യം ${currentQuestion + 1} / ${quizData.length}`;
+
+            let optionsHTML = '';
+            data.options.forEach((opt, index) => {
+                optionsHTML += `
+                    <button onclick="checkAnswer(${index})" class="w-full text-left bg-slate-700/50 hover:bg-primary/30 hover:border-primary border border-slate-600 p-4 rounded-xl text-slate-200 font-medium transition flex items-center justify-between group mb-3">
+                        <span>${opt}</span>
+                        <i class="fa-regular fa-circle text-slate-400 group-hover:text-primary"></i>
+                    </button>
+                `;
+            });
+
+            quizContent.innerHTML = `
+                <h3 class="text-xl font-bold text-white mb-6">${data.question}</h3>
+                <div class="space-y-3">
+                    ${optionsHTML}
+                </div>
+            `;
+        }
+
+        function checkAnswer(selectedOption) {
+            if (selectedOption === quizData[currentQuestion].correct) {
+                score++;
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-content').classList.add('hidden');
+            document.getElementById('quiz-progress').classList.add('hidden');
+            
+            const quizResult = document.getElementById('quiz-result');
+            const quizScoreText = document.getElementById('quiz-score-text');
+            
+            quizResult.classList.remove('hidden');
+            quizScoreText.innerText = `നിങ്ങൾ ${quizData.length}-ൽ ${score} ചോദ്യങ്ങൾക്ക് ശരിയായ ഉത്തരം നൽകി!`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('quiz-content').classList.remove('hidden');
+            document.getElementById('quiz-progress').classList.remove('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            loadQuestion();
+        }
+
+        // Form Submit Handler
+        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            alertBox.classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        });
+
+
+        document.querySelectorAll('.yt-play').forEach(button => {
+            button.addEventListener('click', () => {
+                const videoId = button.dataset.videoId;
+                const title = button.dataset.title || 'LUCENT PSC video';
+                const frame = document.createElement('iframe');
+                frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+                frame.title = title;
+                frame.loading = 'lazy';
+                frame.referrerPolicy = 'strict-origin-when-cross-origin';
+                frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                frame.allowFullscreen = true;
+                frame.className = 'absolute inset-0 w-full h-full border-0';
+                button.closest('.aspect-video').replaceChildren(frame);
+            });
+        });
+
+        // Initialize Quiz on Load
+        window.onload = function() {
+            loadQuestion();
+        };
+    </script>
+</body>
+</html>
